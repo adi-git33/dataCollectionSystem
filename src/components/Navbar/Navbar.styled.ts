@@ -6,8 +6,8 @@ export const NavbarContainer = styled("div")`
     flex-flow: row;
 `;
 
-export const LinkStyle = styled("span")`
-    color: #010101;
+export const LinkStyle = styled("span")(({ theme }) => `
+    color: ${theme.palette.text.primary};
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -16,7 +16,7 @@ export const LinkStyle = styled("span")`
     transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 
     &:hover {
-        color: #425BAF;
+        color: ${theme.palette.primary.main};
         font-weight: 600;
     }
-`;
+`);
