@@ -6,7 +6,6 @@ export const HeaderContainer = styled("header")`
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  width: 100%;
+  width: 96vw;
   height: 10vh;
-  padding: 0 2rem;
 `;

@@ -1,7 +1,7 @@
 import AdsClickIcon from "@mui/icons-material/AdsClick";
 import { LogoContainer, LogoText } from "./Logo.styled";
 import { Link } from "react-router-dom";
-import { ROUTES } from "../../consts/routes";
+import { ROUTES } from "../../../consts/routes";
 
 const Logo = () => {
   return (

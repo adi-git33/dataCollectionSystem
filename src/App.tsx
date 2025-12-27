@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import HomePage from './pages/HomePage/HomePage';
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 
-import Header from './components/Header/Header';
-// import { useLocation, Route, Routes, useNavigate } from "react-router-dom";
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div id="wrapper">
-    <Header />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
+
     </div>
   )
 }

@@ -7,10 +7,14 @@ import { ROUTES } from "../../consts/routes";
 const Navbar = () => {
   const location = useLocation();
 
+  const currentTab = [ROUTES.NEW_EXPERIMENT, ROUTES.RESULTS].includes(location.pathname)
+    ? location.pathname
+    : false;
+
   return (
     <NavbarContainer>
         <Tabs
-            value={location.pathname}
+            value={currentTab}
             >
         <StyledTab
             label="New Experiment"

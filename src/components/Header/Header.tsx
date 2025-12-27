@@ -1,5 +1,5 @@
-import Navbar from "../Navbar/Navbar";
-import Logo from "../Logo/Logo";
+import Navbar from "./Navbar/Navbar";
+import Logo from "./Logo/Logo";
 import { HeaderContainer } from "./Header.styled";
 
 const Header = () => {
