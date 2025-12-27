@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import Tab from "@mui/material/Tab";
 
 export const NavbarContainer = styled("div")`
     display: flex;
@@ -6,7 +7,7 @@ export const NavbarContainer = styled("div")`
     flex-flow: row;
 `;
 
-export const LinkStyle = styled("span")(({ theme }) => `
+export const StyledTab = styled(Tab)(({ theme }) => `
     color: ${theme.palette.text.primary};
     font-size: 1rem;
     font-weight: 600;
@@ -18,5 +19,8 @@ export const LinkStyle = styled("span")(({ theme }) => `
     &:hover {
         color: ${theme.palette.primary.main};
         font-weight: 600;
+    }
+    &.Mui-selected {
+        color: ${theme.palette.primary.main};
     }
 `);

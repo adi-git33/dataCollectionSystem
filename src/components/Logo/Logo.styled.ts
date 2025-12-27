@@ -8,7 +8,7 @@ export const LogoContainer = styled("div")`
 `;
 
 export const LogoText = styled("span")(({ theme }) => `
-    color: ${theme.palette.secondary.main};
+    color: ${theme.palette.primary.main};
     font-family: 'Comfortaa', sans-serif;
     font-size: 1rem;
     font-weight: 700;

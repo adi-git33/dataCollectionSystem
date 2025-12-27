@@ -1,16 +1,14 @@
+import Navbar from "../Navbar/Navbar";
+import Logo from "../Logo/Logo";
+import { HeaderContainer } from "./Header.styled";
 
-import Navbar from '../Navbar/Navbar';
-import Logo from '../Logo/Logo';
 const Header = () => {
-
   return (
-    <div>
-      <div>
-        <Logo />
-        <Navbar />
-      </div>
-    </div>
+    <HeaderContainer>
+      <Logo />
+      <Navbar />
+    </HeaderContainer>
   );
-} 
+};
 
 export default Header;

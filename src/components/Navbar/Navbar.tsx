@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { LinkStyle, NavbarContainer } from "./Navbar.styled";
+import { StyledTab, NavbarContainer } from "./Navbar.styled";
 import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 
 import { ROUTES } from "../../consts/routes";
 
@@ -13,14 +12,14 @@ const Navbar = () => {
         <Tabs
             value={location.pathname}
             >
-        <Tab
-            label={<LinkStyle>New Experiment</LinkStyle>}
+        <StyledTab
+            label="New Experiment"
             value={ROUTES.NEW_EXPERIMENT}
             component={Link}
             to={ROUTES.NEW_EXPERIMENT}
         />
-        <Tab
-            label={<LinkStyle>Experiment Results</LinkStyle>}
+        <StyledTab
+            label="Experiment Results"
             value={ROUTES.RESULTS}
             component={Link}
             to={ROUTES.RESULTS}

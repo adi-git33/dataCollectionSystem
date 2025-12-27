@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <Link to={ROUTES.HOME} style={{ textDecoration: "none" }}>
       <LogoContainer>
-        <AdsClickIcon color="secondary" />
+        <AdsClickIcon color="primary" />
         <LogoText>ClickPulse</LogoText>
       </LogoContainer>
     </Link>

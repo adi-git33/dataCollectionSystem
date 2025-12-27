@@ -1,7 +1,7 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 // Extend the Palette interface to include customColors
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Palette {
     customColors: {
       neonGreen: string;
@@ -21,22 +21,22 @@ declare module '@mui/material/styles' {
 let appTheme = createTheme({
   palette: {
     primary: {
-      main: '#425BAF',
-      contrastText: '#ffffff',
+      main: "#AE42CC",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: '#AE42CC',
+      main: "#425BAF",
     },
     text: {
-      primary: '#010101',
+      primary: "#010101",
     },
     background: {
-        default: '#ffffff',
+      default: "#ffffff",
     },
     customColors: {
-      neonGreen: '#5ebe44',
-      warmRed: '#bd5e44',
-      turquoiseBlue: '#97dae3',
+      neonGreen: "#5ebe44",
+      warmRed: "#bd5e44",
+      turquoiseBlue: "#97dae3",
     },
   },
 });

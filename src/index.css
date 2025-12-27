@@ -4,3 +4,8 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
+
+#wrapper {
+  display: flex;
+  flex-flow: column;
+}
