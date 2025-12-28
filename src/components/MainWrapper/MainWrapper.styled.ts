@@ -11,5 +11,6 @@ export const MainContainer = styled("main")<MainContainerProps>`
   display: flex;
   align-items: ${(props) => props.align || "flex-start"};
   justify-content: ${(props) => props.justify || "flex-start"};
-  width: ${(props) => props.width || "96vw"};
+  width: ${(props) => props.width || "80vw"};
+  gap: 0.8rem;
 `;

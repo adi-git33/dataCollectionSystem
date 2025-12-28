@@ -1,5 +1,4 @@
-import { StyledCard } from "./CardContainer.styled";
-import CardContent from "@mui/material/CardContent";
+import { StyledCard, StyledCardContent } from "./CardContainer.styled";
 
 interface CardContainerProps {
   children: React.ReactNode;
@@ -10,7 +9,7 @@ interface CardContainerProps {
 const CardContainer = ({ children, width, height }: CardContainerProps) => {
   return (
     <StyledCard variant="outlined" style={{ width, height }}>
-      <CardContent>{children}</CardContent>
+      <StyledCardContent>{children}</StyledCardContent>
     </StyledCard>
   );
 };

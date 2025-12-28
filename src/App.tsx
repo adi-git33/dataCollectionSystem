@@ -1,5 +1,6 @@
 import HomePage from './pages/HomePage/HomePage';
 import NewExperimentPage from './pages/NewExperimentPage/NewExperimentPage';
+import ExperimentResultsPage from './pages/ExperimentResultsPage/ExperimentResultsPage';  
 import { Routes, Route } from 'react-router-dom';
 import {ROUTES} from './consts/routes';
 import './App.css'
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.NEW_EXPERIMENT} element={<NewExperimentPage />} />
+        <Route path={ROUTES.RESULTS} element={<ExperimentResultsPage />} />
       </Routes>
 
     </div>
