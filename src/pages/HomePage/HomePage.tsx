@@ -2,7 +2,7 @@ import Header from "../../components/Header/Header";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import CardContainer from "../../components/CardContainer/CardContainer";
-import { useHistoryStore } from "../../stores/useHistoryStore";
+import { useHistoryStore } from "../../store/useHistoryStore";
 import {
   CardParagraph,
   CardInnerContainer,

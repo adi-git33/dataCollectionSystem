@@ -1,20 +1,44 @@
-// import { Rating, Typography, Box } from '@mui/material';
-// import { useState } from 'react';
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
-// const LikertScale = () => {
-//   const [value, setValue] = useState<number | null>(3);
-
-//   return (
-//     <Box>
-//       <Typography component="legend">How satisfied are you?</Typography>
-//       <Rating
-//         name="likert-scale"
-//         value={value}
-//         precision={1}
-//         max={5}
-//         onChange={(event, newValue) => setValue(newValue)}
-//       />
-//     </Box>
-//   );
-// };
-// export default LikertScale;
+const LikertScale = ({
+  question,
+  scalePoints,
+  labels,
+  value,
+  setValue,
+}: {
+  question: string;
+  scalePoints: number;
+  labels: string[];
+  value: number | null;
+  setValue: React.Dispatch<React.SetStateAction<number | null>>;
+}) => {
+  return (
+    <>
+      <p>{question}</p>
+      <RadioGroup
+        row
+        aria-labelledby="likert-scale-group"
+        name="likert-scale-group"
+        value={value !== null ? value.toString() : ""}
+        onChange={(e) => setValue(parseInt(e.target.value))}
+      >
+        {[...Array(scalePoints)].map((_, index) => {
+          const option = index + 1;
+          return (
+            <FormControlLabel
+              key={option}
+              value={option.toString()}
+              control={<Radio checked={value === option} />}
+              label={labels[index]}
+              labelPlacement="bottom"
+            />
+          );
+        })}
+      </RadioGroup>
+    </>
+  );
+};
+export default LikertScale;

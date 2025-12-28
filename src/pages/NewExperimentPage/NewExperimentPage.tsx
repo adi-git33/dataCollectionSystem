@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { getRandomWord } from "../../api/randomWord.api";
-import { ButtonsContainer } from "./NewExperimentPage.styled";
+import { FormContainer } from "./NewExperimentPage.styled";
 
 import Header from "../../components/Header/Header";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import StepperComponent from "../../components/StepperComponent/StepperComponent";
 import ExperimentPartOne from "./ExperimentPartOne/ExperimentPartOne";
 import ExperimentPartTwo from "./ExperimentPartTwo/ExperimentPartTwo";
-
 
 const NewExperimentPage = () => {
   const steps = ["Part 1", "Part 2"];
@@ -52,7 +51,7 @@ const NewExperimentPage = () => {
 
   const handleSubmit = () => {
     // Submission logic here
-  }
+  };
 
   const handleReset = () => {
     setActiveStep(0);
@@ -62,18 +61,18 @@ const NewExperimentPage = () => {
     <div>
       <Header />
       <MainWrapper align="center">
+        <FormContainer>
         <StepperComponent steps={steps} activeStep={activeStep} />
-        {activeStep === 0 ? (
-          <ExperimentPartOne
-            randomWords={randomWords}
-            handleWordChange={handleWordChange}
-            handleNext={handleNext}
-          />
-        ) : (
-          <ExperimentPartTwo
-            handleSubmit={handleSubmit}
-          />
-        )}
+          {activeStep === 0 ? (
+            <ExperimentPartOne
+              randomWords={randomWords}
+              handleWordChange={handleWordChange}
+              handleNext={handleNext}
+            />
+          ) : (
+            <ExperimentPartTwo handleSubmit={handleSubmit} />
+          )}
+        </FormContainer>
       </MainWrapper>
     </div>
   );
