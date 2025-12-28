@@ -1,4 +1,4 @@
-import { styled, } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import type { TabProps } from "@mui/material/Tab";
 import Tab from "@mui/material/Tab";
 
