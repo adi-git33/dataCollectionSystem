@@ -7,6 +7,7 @@ declare module "@mui/material/styles" {
       neonGreen: string;
       warmRed: string;
       turquoiseBlue: string;
+      gray: string;
     };
   }
   interface PaletteOptions {
@@ -14,6 +15,7 @@ declare module "@mui/material/styles" {
       neonGreen?: string;
       warmRed?: string;
       turquoiseBlue?: string;
+      gray?: string;
     };
   }
 }
@@ -37,6 +39,7 @@ let appTheme = createTheme({
       neonGreen: "#5ebe44",
       warmRed: "#bd5e44",
       turquoiseBlue: "#97dae3",
+      gray: "#939393"
     },
   },
 });
