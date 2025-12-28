@@ -1,4 +1,5 @@
-import { styled } from "@mui/material";
+import { styled, } from "@mui/material";
+import type { TabProps } from "@mui/material/Tab";
 import Tab from "@mui/material/Tab";
 
 export const NavbarContainer = styled("div")`
@@ -7,7 +8,7 @@ export const NavbarContainer = styled("div")`
     flex-flow: row;
 `;
 
-export const StyledTab = styled(Tab)(({ theme }) => `
+export const StyledTab = styled(Tab)<TabProps & { to?: string }>(({ theme }) => `
     color: ${theme.palette.text.primary};
     font-size: 1rem;
     font-weight: 600;

@@ -18,14 +18,14 @@ const Navbar = () => {
         <StyledTab
           label="New Experiment"
           value={ROUTES.NEW_EXPERIMENT}
-          component={Link}
           to={ROUTES.NEW_EXPERIMENT}
+          component={Link}
         />
         <StyledTab
           label="Experiment Results"
           value={ROUTES.RESULTS}
-          component={Link}
           to={ROUTES.RESULTS}
+          component={Link}
         />
       </Tabs>
     </NavbarContainer>
