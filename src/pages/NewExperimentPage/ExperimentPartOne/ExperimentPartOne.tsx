@@ -18,10 +18,18 @@ interface ExperimentPartOneProps {
   handleNext: () => void;
   likertValue: number | null;
   handleLikertChange: (val: number | null) => void;
+  allWordsClicked: boolean;
 }
 
 const ExperimentPartOne = (props: ExperimentPartOneProps) => {
-  const { randomWords, handleWordChange, handleNext, likertValue, handleLikertChange } = props;
+  const {
+    randomWords,
+    handleWordChange,
+    handleNext,
+    likertValue,
+    handleLikertChange,
+    allWordsClicked,
+  } = props;
 
   if (randomWords.length === 0) {
     return (
@@ -38,31 +46,40 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
 
   return (
     <>
-      <ImageComponent src={clicksImage} altText="clicks" maxHeight="400px" />
+      <ImageComponent src={clicksImage} altText="clicks" maxHeight="300px" />
       <div>
-        <LikertScale
-          question="How is your reading speed?"
-          scalePoints={4}
-          labels={["Slow", "Somewhat slow", "Somewhat fast", "Fast"]}
-          value={likertValue}
-          setValue={handleLikertChange}
-        />
-      </div>
-      <ButtonsContainer>
-        {randomWords.map((word, index) => (
-          <ButtonComponent
-            key={index}
-            label={word}
-            color="secondary"
-            onClickHandler={() => handleWordChange(index)}
+        <div>
+          <LikertScale
+            question="How is your reading speed?"
+            scalePoints={4}
+            labels={["Slow", "Somewhat slow", "Somewhat fast", "Fast"]}
+            value={likertValue}
+            setValue={handleLikertChange}
           />
-        ))}
-      </ButtonsContainer>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>Click on each word to replace it with a new random word.</p>
+          <p>Once you have clicked all the words, click "Next" to proceed.</p>
+        </div>
+        <ButtonsContainer>
+          {randomWords.map((word, index) => (
+            <ButtonComponent
+              key={index}
+              label={word}
+              color="secondary"
+              onClickHandler={() => handleWordChange(index)}
+            />
+          ))}
+        </ButtonsContainer>
+      </div>
       <NextButtonContainer>
         <ButtonComponent
           label="Next"
           onClickHandler={handleNext}
           color="primary"
+          disabled={likertValue === null || !allWordsClicked}
         />
       </NextButtonContainer>
     </>

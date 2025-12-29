@@ -24,6 +24,7 @@ const NewExperimentPage = () => {
     activeStep,
     randomWords,
     likertValue,
+    allWordsClicked,
     handleGlobalClick,
     handleLikertChange,
     handleWordChange,
@@ -61,6 +62,7 @@ const NewExperimentPage = () => {
               handleNext={handleNext}
               likertValue={likertValue}
               handleLikertChange={handleLikertChange}
+              allWordsClicked={allWordsClicked}
             />
           ) : (
             <ExperimentPartTwo

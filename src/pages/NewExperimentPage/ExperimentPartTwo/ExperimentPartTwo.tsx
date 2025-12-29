@@ -20,9 +20,13 @@ const ExperimentPartTwo = (props: ExperimentPartTwoProps) => {
 
   return (
     <>
+      <p>
+        Click the button repeatedly until the progress bar is full.
+      </p>
       <CounterButton
         onMaxReached={onMaxReached}
         onClick={handleBucketClick}
+        disabled={showSubmitButton}
       />
       {showSubmitButton && (
         <div>

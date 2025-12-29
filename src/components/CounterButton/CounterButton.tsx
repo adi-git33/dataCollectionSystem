@@ -6,6 +6,7 @@ interface CounterButtonProps {
   maxClicks?: number;
   onMaxReached?: () => void;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const CounterButton = ({
@@ -13,10 +14,13 @@ const CounterButton = ({
   maxClicks = 10,
   onMaxReached,
   onClick,
+  disabled = false,
 }: CounterButtonProps) => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
+    if (disabled) return;
+    
     if (onClick) {
       onClick();
     }
@@ -35,6 +39,7 @@ const CounterButton = ({
       variant="contained"
       fillPercent={fillPercent}
       onClick={handleClick}
+      disabled={disabled}
     >
       {label}: {count}
     </StyledCounterButton>

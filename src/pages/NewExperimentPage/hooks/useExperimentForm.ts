@@ -15,6 +15,7 @@ export const useExperimentForm = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [randomWords, setRandomWords] = useState<string[]>([]);
   const [likertValue, setLikertValue] = useState<number | null>(null);
+  const [clickedWords, setClickedWords] = useState<Set<number>>(new Set());
 
   // Store Actions
   const {
@@ -66,6 +67,7 @@ export const useExperimentForm = () => {
 
   const handleWordChange = async (index: number) => {
     recordPage1FirstClick();
+    setClickedWords((prev) => new Set(prev).add(index));
     addPage1Click({
       timestamp: new Date().toISOString(),
       value: randomWords[index],
@@ -111,11 +113,14 @@ export const useExperimentForm = () => {
     }
   };
 
+  const allWordsClicked = randomWords.length > 0 && clickedWords.size === randomWords.length;
+
   return {
     // State
     activeStep,
     randomWords,
     likertValue,
+    allWordsClicked,
     // Methods
     handleGlobalClick,
     handleLikertChange,
