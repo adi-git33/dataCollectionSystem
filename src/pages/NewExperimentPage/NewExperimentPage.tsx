@@ -102,6 +102,11 @@ const NewExperimentPage = () => {
     if (activeStep < steps.length - 1) {
       setActiveStep((prev) => prev + 1);
     }
+    addPage1Click({
+      timestamp: new Date().toISOString(),
+      value: "next",
+      buttonType: "submit",
+    });
   };
 
   const handleBucketClick = () => {
@@ -125,8 +130,16 @@ const NewExperimentPage = () => {
     setLikertValue(null);
   };
 
+  const handleGlobalClick = () => {
+    if (activeStep === 0) {
+      recordPage1FirstClick();
+    } else if (activeStep === 1) {
+      recordPage2FirstClick();
+    }
+  };
+
   return (
-    <div>
+    <div onClick={handleGlobalClick} style={{ minHeight: "100vh" }}>
       <Header onLogoClick={handleLogoClick} />
       <MainWrapper align="center">
         <FormContainer>
