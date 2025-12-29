@@ -1,6 +1,8 @@
+// Styled & Components
 import Header from "../../components/Header/Header";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import PageTitle from "../../components/PageTitle/PageTitle";
+// Logic
 import { useHistoryStore } from "../../store/useHistoryStore";
 
 

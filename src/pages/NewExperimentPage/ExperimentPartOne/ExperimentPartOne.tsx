@@ -1,13 +1,16 @@
+// Styled & Components
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import ImageComponent from "../../../components/ImageComponent/ImageComponent";
 import ButtonComponent from "../../../components/ButtonComponent/ButtonComponent";
 import LikertScale from "../../../components/LikertScale/LikertScale";
-import clicksImage from "../../../assets/clicks.png";
 import {
   ButtonsContainer,
   NextButtonContainer,
 } from "../NewExperimentPage.styled";
+
+// Images
+import clicksImage from "../../../assets/clicks.png";
 
 interface ExperimentPartOneProps {
   randomWords: string[];

@@ -1,13 +1,15 @@
+// Styled & Components
 import Header from "../../components/Header/Header";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import CardContainer from "../../components/CardContainer/CardContainer";
-import { useHistoryStore } from "../../store/useHistoryStore";
 import {
   CardParagraph,
   CardInnerContainer,
   CardCount,
 } from "./HomePage.styled";
+// Logic
+import { useHistoryStore } from "../../store/useHistoryStore";
 
 const HomePage = () => {
   const { completedCount } = useHistoryStore();
