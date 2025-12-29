@@ -2,6 +2,11 @@
 
 A React-based web application designed to conduct user experiments, collecting data on user interactions, reaction times, and decision-making processes.
 
+## Project Resources
+
+- **Design (Figma):** [View Design](https://www.figma.com/design/d7NcybHrjpa3GEN4ffWjYJ/Data-Collection-System?node-id=0-1&t=YO0eJKQFRDH5F8G5-1)
+- **Project Management (Jira):** [View Board](https://adile0194.atlassian.net/jira/software/projects/KAN/list)
+
 ## Getting Started
 
 ### Prerequisites
