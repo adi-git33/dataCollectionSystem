@@ -13,7 +13,7 @@ const LikertScale = ({
   scalePoints: number;
   labels: string[];
   value: number | null;
-  setValue: React.Dispatch<React.SetStateAction<number | null>>;
+  setValue: (value: number | null) => void;
 }) => {
   return (
     <>
@@ -31,7 +31,7 @@ const LikertScale = ({
             <FormControlLabel
               key={option}
               value={option.toString()}
-              control={<Radio checked={value === option} />}
+              control={<Radio checked={value === option} color="secondary" />}
               label={labels[index]}
               labelPlacement="bottom"
             />

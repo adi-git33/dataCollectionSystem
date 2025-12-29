@@ -5,16 +5,21 @@ interface CounterButtonProps {
   label?: string;
   maxClicks?: number;
   onMaxReached?: () => void;
+  onClick?: () => void;
 }
 
 const CounterButton = ({
   label = "Clicks",
   maxClicks = 10,
   onMaxReached,
+  onClick,
 }: CounterButtonProps) => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
     const newCount = count + 1;
     setCount(newCount);
 

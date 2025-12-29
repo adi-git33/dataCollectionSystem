@@ -4,10 +4,11 @@ import CounterButton from "../../../components/CounterButton/CounterButton";
 
 interface ExperimentPartTwoProps {
   handleSubmit: () => void;
+  handleBucketClick: () => void;
 }
 
 const ExperimentPartTwo = (props: ExperimentPartTwoProps) => {
-  const { handleSubmit } = props;
+  const { handleSubmit, handleBucketClick } = props;
   const [showSubmitButton, setShowSubmitButton] = useState(false);
 
   const onMaxReached = () => {
@@ -20,6 +21,7 @@ const ExperimentPartTwo = (props: ExperimentPartTwoProps) => {
     <>
       <CounterButton
         onMaxReached={onMaxReached}
+        onClick={handleBucketClick}
       />
       {showSubmitButton && (
         <div>

@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import ImageComponent from "../../../components/ImageComponent/ImageComponent";
 import ButtonComponent from "../../../components/ButtonComponent/ButtonComponent";
 import LikertScale from "../../../components/LikertScale/LikertScale";
-import clicksImage from "@assets/clicks.png";
+import clicksImage from "../../../assets/clicks.png";
 import {
   ButtonsContainer,
   NextButtonContainer,
@@ -13,10 +13,12 @@ interface ExperimentPartOneProps {
   randomWords: string[];
   handleWordChange: (index: number) => void;
   handleNext: () => void;
+  likertValue: number | null;
+  handleLikertChange: (val: number | null) => void;
 }
 
 const ExperimentPartOne = (props: ExperimentPartOneProps) => {
-  const { randomWords, handleWordChange, handleNext } = props;
+  const { randomWords, handleWordChange, handleNext, likertValue, handleLikertChange } = props;
 
   if (randomWords.length === 0) {
     return (
@@ -39,8 +41,8 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
           question="How is your reading speed?"
           scalePoints={4}
           labels={["Slow", "Somewhat slow", "Somewhat fast", "Fast"]}
-          value={null}
-          setValue={() => {}}
+          value={likertValue}
+          setValue={handleLikertChange}
         />
       </div>
       <ButtonsContainer>

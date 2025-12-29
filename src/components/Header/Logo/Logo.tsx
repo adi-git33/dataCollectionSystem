@@ -3,9 +3,17 @@ import { LogoContainer, LogoText } from "./Logo.styled";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../consts/routes";
 
-const Logo = () => {
+interface LogoProps {
+  onClick?: (e: React.MouseEvent) => void;
+}
+
+const Logo = ({ onClick }: LogoProps) => {
   return (
-    <Link to={ROUTES.HOME} style={{ textDecoration: "none" }}>
+    <Link
+      to={ROUTES.HOME}
+      style={{ textDecoration: "none" }}
+      onClick={onClick}
+    >
       <LogoContainer>
         <AdsClickIcon color="primary" />
         <LogoText>ClickPulse</LogoText>

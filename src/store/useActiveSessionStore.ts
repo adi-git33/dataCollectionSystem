@@ -63,7 +63,7 @@ export const useActiveSessionStore = create<ActiveSessionState>((set) => ({
     return {
       currentSession: {
         ...state.currentSession!,
-        page2BucketClicks: [...state.currentSession!.page2BucketClicks, now] // Store sequence [cite: 45]
+        page2BucketClicks: [...state.currentSession!.page2BucketClicks, now] // Store sequence of UTC timestamps
       }
     };
   }),
