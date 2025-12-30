@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
-export const NotFoundContainer = styled(Box)(({ theme }) => ({
+export const NotFoundContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -10,13 +10,12 @@ export const NotFoundContainer = styled(Box)(({ theme }) => ({
   textAlign: "center",
   width: "100%",
   gap: 10,
-}));
+});
 
 export const ErrorCode = styled("h1")(({ theme }) => ({
   color: theme.palette.primary.main,
   fontWeight: "bold",
   fontSize: "5rem",
-
 }));
 
 export const ErrorMessage = styled("h5")(({ theme }) => ({

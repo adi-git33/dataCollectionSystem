@@ -2,7 +2,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../consts/routes';
 // Styled & Components
-import { Box, Typography } from '@mui/material';
 import MainWrapper from '../../components/MainWrapper/MainWrapper';
 import Header from '../../components/Header/Header';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
