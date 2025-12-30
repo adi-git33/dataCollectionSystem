@@ -15,7 +15,7 @@ export const useExperimentForm = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [randomWords, setRandomWords] = useState<string[]>([]);
   const [likertValue, setLikertValue] = useState<number | null>(null);
-  const [clickedWords, setClickedWords] = useState<Set<number>>(new Set());
+  const [, setClickedWords] = useState<Set<number>>(new Set());
 
   // Store Actions
   const {
