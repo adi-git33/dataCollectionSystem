@@ -10,7 +10,7 @@ export const useExperimentResults = () => {
   ];
 
   const page2Columns = [
-    { field: "count", headerName: "Click Count" },
+    { field: "count", headerName: "Bucket Clicks" },
     { field: "timestamp", headerName: "Timestamp" },
   ];
 
@@ -50,7 +50,7 @@ export const useExperimentResults = () => {
 
   const part1Stats = [
     {
-      label: "Total Duration",
+      label: "Time to Complete Part 1",
       value: formatDuration(calculatePart1Duration()),
       highlight: true,
     },
@@ -66,7 +66,7 @@ export const useExperimentResults = () => {
 
   const part2Stats = [
     {
-      label: "Total Bucket Duration",
+      label: "Time to Fill Bucket",
       value: formatDuration(lastSession?.page2TotalDuration || null),
       highlight: true,
     },
