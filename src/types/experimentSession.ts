@@ -2,6 +2,7 @@ import type { ClickEvent } from "./clickEvent";
 
 export interface ExperimentSession {
   id: string;
+  startTime: string;
   page1FirstClick: string | null;
   page1Clicks: ClickEvent[];
   page2FirstClick: string | null;

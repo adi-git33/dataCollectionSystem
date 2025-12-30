@@ -6,7 +6,17 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-const TableComponent = ({ columns, data }) => {
+interface Column {
+  field: string;
+  headerName: string;
+}
+
+interface TableComponentProps {
+  columns: Column[];
+  data: Record<string, string | number | boolean | null>[];
+}
+
+const TableComponent = ({ columns, data }: TableComponentProps) => {
   return (
     <TableContainer component={Paper}>
       <Table>

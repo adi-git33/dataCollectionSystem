@@ -20,6 +20,7 @@ export const useActiveSessionStore = create<ActiveSessionState>((set) => ({
   startNewExperiment: () => set({
     currentSession: {
       id: crypto.randomUUID(),
+      startTime: new Date().toISOString(),
       page1FirstClick: null,
       page1Clicks: [],
       page2FirstClick: null,

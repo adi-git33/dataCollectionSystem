@@ -1,13 +1,13 @@
-import {styled} from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
+import { Grid, Box } from "@mui/material";
 
-export const ResultsContainer = styled("div")`
-    display: flex;
-    flex-flow: column;
-    gap: 16px;
-`
+export const ResultsContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
-export const ExperimentPartContainer =  styled("div")`
-    display: flex;
-    flex-flow: row wrap;
-    gap: 16px;
-`
+export const GridStyled = styled(Grid)`
+  width: 100%;
+  margin: 0;
+`;

@@ -15,11 +15,11 @@ export const StyledTab = styled(Tab)<TabProps & { to?: string }>(({ theme }) => 
     cursor: pointer;
     white-space: nowrap;
     text-transform: capitalize;
-    transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;fontSize: '1rem',
+    minWidth: '160px',
 
     &:hover {
         color: ${theme.palette.primary.main};
-        font-weight: 600;
     }
     &.Mui-selected {
         color: ${theme.palette.primary.main};

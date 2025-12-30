@@ -37,6 +37,7 @@ const NewExperimentPage = () => {
   // --- Exit Logic ---
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    (e.currentTarget as HTMLElement).blur();
     setIsExitModalOpen(true);
   };
 
