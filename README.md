@@ -85,8 +85,3 @@ To ensure a production-ready deployment:
   - **Part 1:** Records specific interaction types (Likert scale changes, Word button clicks) along with their values and timestamps. The "Submit" action is used for duration calculation but filtered from the detailed interaction table.
   - **Part 2:** Tracks the frequency and timing of "Bucket" task interactions.
 - **Timestamping:** All events are recorded using ISO strings (UTC) to ensure consistency. On the results page, these are formatted to the user's local locale (Date & Time) for better readability.
-
-#### 5. User Interface & Experience
-- **Responsive Design:** Utilizes MUI's Grid system (Grid) to adapt to different screen sizes.
-- **Layout Stability:** Enforces a vertical scrollbar to prevent layout shifts between pages with different content lengths.
-- **Sticky Navigation:** The header remains fixed at the top of the viewport for easy access to navigation controls.
