@@ -7,6 +7,7 @@ import LikertScale from "../../../components/LikertScale/LikertScale";
 import {
   ButtonsContainer,
   NextButtonContainer,
+  StyledPaper,
 } from "../NewExperimentPage.styled";
 
 // Images
@@ -44,23 +45,23 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
 
   return (
     <>
-      <ImageComponent src={clicksImage} altText="clicks" maxHeight="300px" />
-      <div>
-        <div>
-          <LikertScale
-            question="How is your reading speed?"
-            scalePoints={4}
-            labels={["Slow", "Somewhat slow", "Somewhat fast", "Fast"]}
-            value={likertValue}
-            setValue={handleLikertChange}
-          />
-        </div>
-      </div>
-      <div>
-        <div>
-          <p>Click on each word to replace it with a new random word.</p>
-          <p>Answer the question above, then click "Next" to proceed.</p>
-        </div>
+      <Box sx={{ textAlign: "center" }}>
+        <ImageComponent src={clicksImage} altText="clicks" maxHeight="300px" />
+      </Box>
+
+      <StyledPaper elevation={0}>
+        <LikertScale
+          question="How is your reading speed?"
+          required={true}
+          scalePoints={4}
+          labels={["Slow", "Somewhat slow", "Somewhat fast", "Fast"]}
+          value={likertValue}
+          setValue={handleLikertChange}
+        />
+      </StyledPaper>
+
+      <StyledPaper elevation={0}>
+        <p>Click on each word to replace it with a new random word.</p>
         <ButtonsContainer>
           {randomWords.map((word, index) => (
             <ButtonComponent
@@ -71,10 +72,11 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
             />
           ))}
         </ButtonsContainer>
-      </div>
+      </StyledPaper>
+
       <NextButtonContainer>
         <ButtonComponent
-          label="Next"
+          label="Next Step"
           onClickHandler={handleNext}
           color="primary"
           disabled={likertValue === null}

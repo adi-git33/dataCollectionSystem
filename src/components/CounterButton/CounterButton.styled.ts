@@ -21,7 +21,7 @@ export const StyledCounterButton = styled(Button, {
     top: 0,
     height: "100%",
     width: `${fillPercent / 2}%`,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     transition: "width 0.3s ease-in-out",
     zIndex: -1,
   },

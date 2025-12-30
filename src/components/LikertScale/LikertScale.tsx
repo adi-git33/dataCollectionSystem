@@ -8,16 +8,20 @@ const LikertScale = ({
   labels,
   value,
   setValue,
+  required = false,
 }: {
   question: string;
   scalePoints: number;
   labels: string[];
   value: number | null;
   setValue: (value: number | null) => void;
+  required?: boolean;
 }) => {
   return (
     <>
-      <p>{question}</p>
+      <p>
+        {question} {required && <span style={{ color: "red" }}>*</span>}
+      </p>
       <RadioGroup
         row
         aria-labelledby="likert-scale-group"
