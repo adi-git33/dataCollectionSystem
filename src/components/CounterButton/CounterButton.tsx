@@ -19,7 +19,7 @@ const CounterButton = ({
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    if (disabled) return;
+    if (disabled || count >= maxClicks) return;
     
     if (onClick) {
       onClick();

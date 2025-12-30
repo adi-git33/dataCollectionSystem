@@ -10,7 +10,7 @@ import {
 } from "../NewExperimentPage.styled";
 
 // Images
-import clicksImage from "../../../assets/clicks.png";
+import clicksImage from "@assets/clicks.png";
 
 interface ExperimentPartOneProps {
   randomWords: string[];
@@ -18,7 +18,6 @@ interface ExperimentPartOneProps {
   handleNext: () => void;
   likertValue: number | null;
   handleLikertChange: (val: number | null) => void;
-  allWordsClicked: boolean;
 }
 
 const ExperimentPartOne = (props: ExperimentPartOneProps) => {
@@ -28,7 +27,6 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
     handleNext,
     likertValue,
     handleLikertChange,
-    allWordsClicked,
   } = props;
 
   if (randomWords.length === 0) {
@@ -61,7 +59,7 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
       <div>
         <div>
           <p>Click on each word to replace it with a new random word.</p>
-          <p>Once you have clicked all the words, click "Next" to proceed.</p>
+          <p>Answer the question above, then click "Next" to proceed.</p>
         </div>
         <ButtonsContainer>
           {randomWords.map((word, index) => (
@@ -79,7 +77,7 @@ const ExperimentPartOne = (props: ExperimentPartOneProps) => {
           label="Next"
           onClickHandler={handleNext}
           color="primary"
-          disabled={likertValue === null || !allWordsClicked}
+          disabled={likertValue === null}
         />
       </NextButtonContainer>
     </>

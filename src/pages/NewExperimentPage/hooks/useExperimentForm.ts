@@ -113,14 +113,11 @@ export const useExperimentForm = () => {
     }
   };
 
-  const allWordsClicked = randomWords.length > 0 && clickedWords.size === randomWords.length;
-
   return {
     // State
     activeStep,
     randomWords,
     likertValue,
-    allWordsClicked,
     // Methods
     handleGlobalClick,
     handleLikertChange,
